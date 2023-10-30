@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-three/fiber": "^8.15.8",
-    "@types/node": "^16.18.59",
-    "@types/react": "^18.2.33",
-    "@types/react-dom": "^18.2.14",
-    "@types/three": "^0.158.0",
+    "@react-three/drei": "^9.77.3",
+    "@react-three/fiber": "^8.13.3",
+    "@react-three/postprocessing": "^2.14.12",
+    "gltfjsx": "^6.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
-    "sass": "^1.69.5",
-    "three": "^0.158.0",
+    "react-scripts": "5.0.1",
+    "sass": "^1.63.6",
+    "stream": "^0.0.2",
+    "three": "^0.153.0",
     "typescript": "^4.9.5"
   },
   "scripts": {
@@ -38,9 +38,15 @@
     ]
   },
   "devDependencies": {
+    "@types/three": "^0.158.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.36",
+    "@types/react": "^18.2.13",
+    "@types/react-dom": "^18.2.6",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
     "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-react": "^7.33.2",
     "prettier": "3.0.3"
   }
