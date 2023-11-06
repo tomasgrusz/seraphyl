@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.2.4 ./public/assets/portal.glb -t
 
 import * as THREE from 'three';
 import React from 'react';
-import { useGLTF } from '@react-three/drei';
+import { Text, useGLTF } from '@react-three/drei';
 import { GLTF } from 'three-stdlib';
 
 type GLTFResult = GLTF & {
@@ -105,6 +105,6 @@ const Portal = (props: JSX.IntrinsicElements['group']) => {
   );
 };
 
-useGLTF.preload('/portal.glb');
+useGLTF.preload('/assets/portal.glb');
 
 export { Portal };

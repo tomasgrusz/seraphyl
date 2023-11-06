@@ -1,0 +1,72 @@
+.Scene {
+  width: 100vw;
+  height: 100vh;
+  background-color: #211134;
+
+  .border {
+    width: 100vw;
+    height: 100vw;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    // background: radial-gradient(42.04% 50% at 50% 50%, #58417501 20%, #422f53a1 100%);
+    // border-radius: 5.125rem;
+
+    .hearts {
+      font-size: 4rem;
+      position: absolute;
+      top: 3rem;
+      left: 3rem;
+      color: rgba(235, 235, 245, 0.6);
+      font-weight: 200;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      svg {
+        color: #ff3b30;
+      }
+    }
+
+    .div {
+      border-radius: 3.125rem;
+      border: 1.5px solid rgba(255, 255, 255, 0.5);
+      background: radial-gradient(42.04% 50% at 50% 50%, #584175 0%, #422f53 100%);
+      width: 25%;
+      height: 35%;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+    }
+
+    .switch {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+
+    }
+  }
+
+  .button {
+    border-radius: 200rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    background-blend-mode: overlay;
+    backdrop-filter: blur(30px);
+    font-size: 2.4375rem;
+    display: flex;
+    padding: 1.75rem 2.0625rem 1.6875rem 2rem;
+    align-items: center;
+    gap: 0.625rem;
+    color: rgba(235, 235, 245, 0.6);
+
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      cursor: pointer;
+      background: rgba(255, 255, 255, 0.3);
+      scale: 1.05;
+    }
+  }
+}
