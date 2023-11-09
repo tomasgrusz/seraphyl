@@ -3,14 +3,19 @@
 import { Canvas } from '@react-three/fiber';
 import { motion } from 'framer-motion';
 import styles from './Scene.module.scss';
-import { Html, MeshPortalMaterial, OrbitControls, PerspectiveCamera, Text } from '@react-three/drei';
+import {
+  Html,
+  OrbitControls,
+  OrbitControlsProps,
+  PerspectiveCamera,
+  Text,
+} from '@react-three/drei';
 import Portal from '../Portal';
 import { useEffect, useRef, useState } from 'react';
 import { BsFillHeartFill } from 'react-icons/bs';
 import { GiMagicPortal } from 'react-icons/gi';
 import CountUp from 'react-countup';
 import MagicSwitch from '../MagicSwitch';
-import { Box3, Vector3 } from 'three';
 
 const Scene = () => {
   const [coords, setCoords] = useState({ x: 0, y: 0 });
@@ -35,9 +40,6 @@ const Scene = () => {
   }, []);
 
   useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    // orbitRef.current?.setAzimuthalAngle(0);
     const diffX = coords.x - window.innerWidth / 2;
     const directionX = diffX > 0 ? -1 : 1;
     const distanceX = Math.abs(diffX) / (window.innerWidth / 2);
@@ -51,19 +53,18 @@ const Scene = () => {
     // @ts-ignore
     // orbitRef.current?.setPolarAngle((distanceY * directionY * Math.PI) / 3);
     orbitRef.current?.setPolarAngle(Math.PI / 2 + (distanceY * directionY * Math.PI) / 6);
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    // orbitRef.current?.setPolarAngle(Math.PI / 2);
   }, [coords, orbitRef]);
 
   return (
     <div className={styles.Scene}>
       <Canvas shadows>
         <color attach='background' args={['#211134']} />
-            <group position={[0, -5, -10]} ref={portalRef} >
-              <Portal enabled={isPortalActive} />
-            </group>
-        <Text position={[0, -6.5, 7.5]}>Seraphyl #1</Text>
+        <group position={[0, -5, -10]} ref={portalRef}>
+          <Portal enabled={isPortalActive} />
+        </group>
+        <Text position={[0, -6.5, 7.5]} font={'/fonts/Summer/Summer.otf'} fontSize={2}>
+          Seraphyl 182
+        </Text>
         <Html transform position={[0, 0, 0]}>
           <motion.div
             className={styles.border}
