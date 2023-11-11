@@ -1,4 +1,4 @@
-import { Sparkles, useGLTF, Float, useHelper, Stars } from '@react-three/drei';
+import { Sparkles, useGLTF, Float, useHelper } from '@react-three/drei';
 import { useRef } from 'react';
 import { Model } from './Portal.model';
 import { CylinderGeometry, Mesh, MeshBasicMaterial, SpotLight, SpotLightHelper } from 'three';
@@ -26,7 +26,6 @@ const Portal = ({ enabled }: { enabled: boolean }) => {
   return (
     <group rotation={[0, -Math.PI / 5, 0]} dispose={null}>
       <Model castShadow receiveShadow />
-      <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
       <Sparkles
         position={[0, -5, 0]}
         count={100}

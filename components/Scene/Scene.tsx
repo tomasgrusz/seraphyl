@@ -10,6 +10,7 @@ import {
   OrbitControlsProps,
   PerformanceMonitor,
   PerspectiveCamera,
+  Stars,
   Text,
 } from '@react-three/drei';
 import Portal from '../Portal';
@@ -48,6 +49,7 @@ const Scene = () => {
   return (
     <Physics gravity={[0, -10, 0]} interpolate={false}>
       <color attach='background' args={['#211134']} />
+      <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
       <Float speed={2} rotationIntensity={0.1} floatIntensity={1}>
       <RigidBody gravityScale={0}>
         <MeshCollider type='trimesh'>
