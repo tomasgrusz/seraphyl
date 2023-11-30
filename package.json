@@ -13,7 +13,6 @@
     "@react-three/fiber": "^8.15.9",
     "@react-three/postprocessing": "^2.15.10",
     "@react-three/rapier": "^1.1.2",
-    "ecctrl": "^1.0.41",
     "framer-motion": "^10.16.4",
     "gltfjsx": "^6.2.14",
     "next": "14.0.1",
