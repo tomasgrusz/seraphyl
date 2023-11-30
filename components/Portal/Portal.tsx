@@ -56,7 +56,7 @@ const Portal = ({ enabled }: { enabled: boolean }) => {
             ref={portalRef}
           /> */}
         <spotLight
-          color={'#aaf'}
+          color={'#fff'}
           position={[4, 1, 0.1]}
           target={portalLightTarget}
           ref={light1}
@@ -69,20 +69,20 @@ const Portal = ({ enabled }: { enabled: boolean }) => {
       {/* Light */}
       <spotLight
         ref={light2}
-        color={'#aaf'}
+        color={'#fff'}
         intensity={1}
         angle={Math.PI / 2}
         position={[-15, 15, -10]}
         decay={0}
       />
       <spotLight
-        color={'#aaf'}
+        color={'#fff'}
         intensity={1}
         angle={Math.PI / 4}
         position={[25, -2, 20]}
         decay={0}
       />
-      <ambientLight color={'#bbf'} intensity={2} />
+      <ambientLight color={'#eef'} intensity={0.75} />
     </group>
   );
 };
